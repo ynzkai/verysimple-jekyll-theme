@@ -1,0 +1,21 @@
+<header class="site-header">
+
+  <div class="site-title">
+    <!-- <p>{{ site.title }}</p> -->
+    <!-- gavatar
+    <div class="logo"><img src="https://www.gravatar.com/avatar/{{ site.email | downcase | md5 }}" /></div>
+    -->
+    <div class="logo"><img src="/images/head.jpg" title="{{ site.title }}"></div>
+
+    <div class="sayword">
+      <span>{</span>
+      <div class="speak-wrap">
+        <div class="speak-panel"></div>
+      </div>
+      <span>}</span>
+    </div>
+  </div>
+
+  {% include navbar.html %}
+
+</header>

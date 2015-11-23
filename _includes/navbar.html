@@ -1,0 +1,11 @@
+
+<nav class="site-nav">
+  <a href="{{ site.baseurl }}/"><i class="icon-home"></i> Home</a>
+  {% for page in site.pages | sort: page.title %}
+    {% if page.title %}
+    <span> / </span>
+    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>
+

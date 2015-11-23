@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <div class="item">
+          <span class="post-meta">
+            {{ post.date | date: "%F" }}
+            <i class="icon-double-angle-right"></i>
+          </span>
+          
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+          <span class="tags">
+            {% for tag in post.tags %}
+              <span><i class="icon-tag"></i> {{ tag }}</span>
+            {% endfor %}
+          </span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
+
+{% include sns.html %}

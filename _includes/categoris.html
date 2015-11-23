@@ -1,0 +1,7 @@
+<div class="categories">
+  <h5>分类</h5>
+  {% for c in site.categories %}
+    <a href="{{ c | first | prepend: '/' | prepend: site.url }}"><span class="category">{{ c | first }}{{ c | last | size }}</span></a>
+  {% endfor %}
+</div>
+

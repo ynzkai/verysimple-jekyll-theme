@@ -1,0 +1,110 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   15px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$small-radius: 5px;
+$circle-radius: 999px;
+
+$spacing-unit:     30px;
+
+$text-color:       #324952;
+$background-color: #122932;
+$brand-color:      #dd0;
+$brand-color-light: lighten($brand-color, 25%);
+$brand-color-dark: darken($brand-color, 25%);
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 15%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        $content-width - 1px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// My style
+
+//@font-face {
+//	font-family: edundot;
+//	src: url('../font/edundot.ttf');
+//}
+
+@mixin boxSizing($a) {
+	box-sizing: $a;
+	-webkit-box-sizing: $a;
+	-moz-box-sizing: $a;
+	-ms-box-sizing: $a;
+	-o-box-sizing: $a;
+}
+
+@mixin borderRadius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+}
+
+@mixin transition($property, $duration) {
+	transition: $property $duration;
+	-webkit-transition: $property $duration;
+	-moz-transition: $property $duration;
+	-ms-transition: $property $duration;
+	-o-transition: $property $duration;
+}
+
+.clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+		height: 0;
+	}
+}
+
+
+.pull-right {
+	float: right;
+	display: inline-block;
+}
+
+.pull-left {
+	float: left;
+	display: inline-block;
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+

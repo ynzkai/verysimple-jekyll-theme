@@ -1,0 +1,35 @@
+---
+layout: nologo
+---
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      <span>分类: {{ page.categories | join: ", " }}</span>
+      <span>{% if page.tags %} 标签: {{ page.tags | join: "," }} {% endif %}</span>
+      <span>{% if page.author %} 作者: {{ page.author }} {% endif %}</span>
+      <span>时间: {{ page.date | date: "%F %T" }}</span>
+    </p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>
+
+<div class="previous-next">
+  {% if page.previous != nil %}
+    <div class="previous-post">
+      <a href="{{ page.previous.url }}">{{ page.previous.title }}<span class="separator">&larr;</span></a>
+    </div>
+  {% endif %}
+
+  {% if page.next != nil %}
+    <div class="next-post">
+      <a href="{{ page.next.url }}"><span class="separator">&rarr;</span>{{ page.next.title }}</a>
+    </div>
+  {% endif %}
+</div>

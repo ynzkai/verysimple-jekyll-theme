@@ -1,0 +1,75 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+<div class="about">
+  <p>
+    ......待续
+  </p>
+
+  以下数字有水分:)
+
+  <div class="skills">
+    <div class="skill">
+      <div id="ruby" class="line"></div>
+      <div id="javascript" class="line"></div>
+      <div id="HTML" class="line"></div>
+      <div id="CSS" class="line"></div>
+      <div id="Cpp" class="line"></div>
+    </div>
+  </div>
+
+  <div class="rel-info">
+    联系方式:
+  
+    <div class="item">
+      <div class="inner">
+        GitHub:
+        <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}">
+          <i class="icon-github"></i>
+          https://github.com/ynzkai
+        </a>
+      </div>
+    </div>
+  
+    <div class="item">
+      <div class="inner">
+        Twitter:
+        <a href="https://twitter.com/{{ site.twitter_username }}" title="{{ site.twitter_username }}">
+          <i class="icon icon-twitter"></i>
+          https://twitter.com/ynzkai
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="inner">
+        微博: 
+        <a href="http://weibo.cn/u/2416544665">http://weibo.cn/u/2416544665</a>
+      </div>
+    </div>
+    
+    <div class="item email">
+      <div class="inner">
+        {% if site.twitter_username %}
+          Email: 
+          <a href="mailto:{{ site.email }}">
+            <i class="icon icon-mail"></i>
+            <span>{{ site.email }}</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="inner">
+        QQ: 916282079
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% include sns.html %}
