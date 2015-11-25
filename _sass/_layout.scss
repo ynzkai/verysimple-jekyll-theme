@@ -95,7 +95,7 @@ ul {
 		margin-top: 30px;
 		margin-bottom: 30px;
 		a {
-			color: $brand-color;
+			color: lighten($text-color, 30%);
 		}
 		&>p:before {
 			content: " ";
