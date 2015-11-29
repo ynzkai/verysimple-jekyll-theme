@@ -3,11 +3,11 @@ $(document).ready(function() {
 
 	$container.init_robot({
 		container: $container, 
-		interval: 200,
-		pausekey: '`',
-		deletekey: '@',
-		newline: '<',
-		loop: false
+		interval: 200, //设置时间间隔
+		pausekey: '`', //定义暂停字符
+		deletekey: '@', //定义清除字符
+		newline: '<', //定义换行字符
+		loop: false //是否循环
 	});
 
 	//设置网页头部的说话文本
