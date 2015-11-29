@@ -1,6 +1,6 @@
 # verysimple-jekyll-theme
 
-### 这事一个简单的jekyll模版
+### 这是一个简单的jekyll模版
 
 **Demo** <http://zkai.me>
 
