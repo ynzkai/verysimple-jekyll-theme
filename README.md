@@ -28,16 +28,16 @@
 
 1. 在about文件中增加`<div>`条目
 
-	<div class="skill"">
-	  <div class="skill">
-	    <div id="ruby" class="line"></div>
-	    <div id="javascript" class="line"></div>
-	    <div id="your-skill" class="line"></div>
-	  </div>
-	</div>
+		<div class="skill"">
+		  <div class="skill">
+			<div id="ruby" class="line"></div>
+			<div id="javascript" class="line"></div>
+			<div id="your-skill" class="line"></div>
+		  </div>
+		</div>
 
 2. 在/js/main.js文件中增加几行代码
 
-	var $foo = $("your-skill");
-	$foo.w = "90%";
-	skills.push($foo);
+		var $foo = $("your-skill");
+		$foo.w = "90%";
+		skills.push($foo);
